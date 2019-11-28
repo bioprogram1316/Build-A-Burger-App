@@ -88,8 +88,8 @@ class Auth extends Component {
                 elementConfig={formElement.config.elementConfig}
                 value={formElement.config.value}
                 invalid={!formElement.config.valid}
-                shouldValidate={formElement.config.validation} // validates only if the object has a validation check
-                touched={formElement.config.touched} // says whether the input line has been touched by the user
+                shouldValidate={formElement.config.validation} 
+                touched={formElement.config.touched} 
                 changed={(event) => this.inputChangedHandler(event, formElement.id)}
              />
         ));
@@ -101,7 +101,7 @@ class Auth extends Component {
         let errorMessage = null;
 
         if (this.props.error) { 
-            errorMessage = ( // firebase automatically sends custom error messages, not all backends do
+            errorMessage = ( // firebase automatically sends custom error messages
                 <p>{this.props.error.message}</p>
             );
         }
@@ -121,7 +121,7 @@ class Auth extends Component {
                 </form>
                 <Button 
                     clicked={this.switchAuthModeHandler}
-                    btnType="Danger">SWITCH TO {this.state.isSignup ? 'SIGN-IN' : 'SIGN-UP'}</Button>
+                    btnType="Danger">SWITCH TO {this.state.isSignup ? 'LOG-IN' : 'SIGN-UP'}</Button>
             </div>
         );
     }

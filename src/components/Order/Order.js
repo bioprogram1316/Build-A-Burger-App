@@ -20,6 +20,7 @@ const order = (props) => {
                 display: 'inline-block',
                 margin: '0 8px',
                 border: '1px solid #ccc',
+                borderRadius: '4px',
                 padding: '5px' 
             }} 
             key={ig.name}>{ig.name} ({ig.amount})</span>;
@@ -27,8 +28,8 @@ const order = (props) => {
 
     return (
         <div className={classes.Order} >
-            <p>Ingredients: {ingredientOutput}</p>
-            <p>Price: <strong>$ {props.price.toFixed(2)} USD</strong></p>
+            <p><strong>Ingredients:</strong> {ingredientOutput}</p>
+            <p><strong>Price: $ {props.price.toFixed(2)}</strong></p>
         </div>
     );
 };

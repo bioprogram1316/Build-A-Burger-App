@@ -25,7 +25,7 @@ class Orders extends Component {
             ))
         }
         
-        return ( // + before string changes it to a number
+        return (
           <div>
              {orders}
           </div>
